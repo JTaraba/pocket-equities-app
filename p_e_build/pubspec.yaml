@@ -67,6 +67,18 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  #  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  fonts:
+    - family: Roboto
+      fonts:
+      - asset: fonts/Roboto-Regular.ttf
+      - asset: fonts/Roboto-Black.ttf
+    
+    - family: Avenir
+      fonts:
+      - asset: fonts/AvenirLTStd-Book.otf
+      - asset: fonts/AvenirLTStd-Medium.otf
+      - asset: fonts/AvenirLTStd-Roman.otf

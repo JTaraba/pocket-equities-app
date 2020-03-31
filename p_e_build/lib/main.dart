@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './home.dart';
+import './testPage.dart';
 
 
 void main() => runApp(MyApp());
@@ -16,6 +17,7 @@ class MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Avenir'),
       home: DefaultTabController(
         length: 3,
         child: new Scaffold(
@@ -37,7 +39,7 @@ class MyAppState extends State<MyApp>{
               boxShadow: [
                 BoxShadow(
                 blurRadius: 3.0,
-                color:Colors.grey[900],
+                color:Colors.grey[850],
                 spreadRadius: 5.0
                 ),
               ]
@@ -57,7 +59,7 @@ class MyAppState extends State<MyApp>{
               indicatorSize: TabBarIndicatorSize.label,
               indicatorPadding: EdgeInsets.all(5.0),
               indicatorColor: Colors.blueGrey,
-              labelPadding: EdgeInsets.all(22),   
+              labelPadding: EdgeInsets.all(15),   
             ),
           ),
           backgroundColor: Colors.grey[850],
