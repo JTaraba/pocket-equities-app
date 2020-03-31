@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './home.dart';
-import './testPage.dart';
+import './pages/home.dart';
+import './pages/testPage.dart';
 
 
 void main() => runApp(MyApp());
@@ -24,7 +24,7 @@ class MyAppState extends State<MyApp>{
           body: TabBarView(
             children: [
               new Container(
-                child: HomePage(),
+                child: TestPage(),
               ),
               new Container(
                 color: Colors.grey[850],

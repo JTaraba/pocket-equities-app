@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_e_build/widgets/balanceCards.dart';
 
 class TestPage extends StatefulWidget {
   @override
@@ -22,6 +23,12 @@ class _TestPageState extends State<TestPage> {
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
                 ),
+                boxShadow: [
+                new BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                blurRadius: 3.0,
+                  ),
+                ],
                 color: Colors.blueGrey[600],
               ),
               child: Row(
@@ -47,10 +54,24 @@ class _TestPageState extends State<TestPage> {
                 backgroundColor: Colors.grey[800],
                 onPressed: (){},
               ),
-            ) 
+            ), 
+            Container( 
+              child: ListView(
+                padding: EdgeInsets.only(top:500),
+                children: getList(),
+
+              )
+            )
           ],
         ),
       ),
     ); 
+  }
+
+  List<Widget> getList(){
+    List<BalanceCard> list = [];
+      list.add(BalanceCard(title: "Balance"));
+      list.add(BalanceCard(title: "Purchases"));
+    return list;
   }
 }
