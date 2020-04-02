@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:p_e_build/widgets/balanceCards.dart';
+import 'package:p_e_build/widgets/paymentsCard.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,6 +8,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  int dollarAmount = 0;
+
+  void changeBalance(){
+    setState((){
+      dollarAmount += 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return 
@@ -22,6 +33,12 @@ class _HomePageState extends State<HomePage> {
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
                 ),
+                boxShadow: [
+                new BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                blurRadius: 3.0,
+                  ),
+                ],
                 color: Colors.blueGrey[600],
               ),
               child: Row(
@@ -45,12 +62,37 @@ class _HomePageState extends State<HomePage> {
               child: FloatingActionButton(
                 child: Icon(Icons.add, size: 20,),
                 backgroundColor: Colors.grey[800],
-                onPressed: (){},
+                onPressed: (){
+                  changeBalance();
+                },
               ),
-            ) 
+            ), 
+            Container( 
+              child: BalanceCard(title: "Balance:"),
+              padding: EdgeInsets.only(top: 270, ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 330, left: 95),
+              child: Text(
+                "$dollarAmount", 
+                style: TextStyle(
+                  color: Colors.grey[300],
+                  fontSize: 40,
+                  fontFamily: "Avenir",
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            )
           ],
         ),
       ),
     ); 
   }
+
+  /*List<Widget> getList(){
+    List<BalanceCard> list = [];
+      list.add(BalanceCard(title: "Balance:"));
+      list.add(PaymentCard(title: "Payments"));
+    return list;
+  }*/
 }

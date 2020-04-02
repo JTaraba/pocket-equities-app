@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
- class BalanceCard extends StatelessWidget {
+ class PaymentCard extends StatelessWidget {
    final String title;
-
-   BalanceCard({this.title});
+   PaymentCard({this.title});
    @override
    Widget build(BuildContext context) {
      return Container(
@@ -24,12 +23,8 @@ import 'package:flutter/material.dart';
           Column(
             children: <Widget>[
               Text(title, style: TextStyle(color:Colors.grey[300], fontFamily: "Avenir", fontSize: 24,)),
-              Container(
-                padding: EdgeInsets.only(top: 12),
-                child: Icon(Icons.attach_money, color: Colors.green, size: 40,)),
             ],
-          ),
-
+          )
          ],
         ),
      );

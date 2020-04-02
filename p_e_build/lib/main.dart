@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_e_build/pages/purchase.dart';
 import './pages/home.dart';
 import './pages/testPage.dart';
 
@@ -24,13 +25,13 @@ class MyAppState extends State<MyApp>{
           body: TabBarView(
             children: [
               new Container(
-                child: TestPage(),
+                child: HomePage(),
               ),
               new Container(
-                color: Colors.grey[850],
+                child: PurchasesPage(),
               ), 
               new Container(
-                color: Colors.grey[850],
+                color: Colors.grey[900],
               ),
             ],
           ),
@@ -50,7 +51,7 @@ class MyAppState extends State<MyApp>{
                   icon: new Icon(Icons.account_balance_wallet),
                 ),
                 Tab(
-                  icon: new Icon(Icons.account_balance),
+                  icon: new Icon(Icons.credit_card),
                 ),
                 Tab(icon: new Icon(Icons.settings),)
               ],

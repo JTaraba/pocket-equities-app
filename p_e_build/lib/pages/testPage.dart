@@ -59,7 +59,6 @@ class _TestPageState extends State<TestPage> {
               child: ListView(
                 padding: EdgeInsets.only(top:500),
                 children: getList(),
-
               )
             )
           ],
@@ -70,8 +69,8 @@ class _TestPageState extends State<TestPage> {
 
   List<Widget> getList(){
     List<BalanceCard> list = [];
-      list.add(BalanceCard(title: "Balance"));
-      list.add(BalanceCard(title: "Purchases"));
+      list.add(BalanceCard(title: "Balance:"));
+      list.add(BalanceCard(title: "Payments"));
     return list;
   }
 }
