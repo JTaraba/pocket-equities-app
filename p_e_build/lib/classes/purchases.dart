@@ -3,7 +3,7 @@ class Purchase{
 
   Purchase(
     String name, 
-    double price, 
+    String price, 
     String store,
     String paymentMethod,
     String date,

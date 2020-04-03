@@ -66,7 +66,7 @@ class _PurchasesPageState extends State<PurchasesPage> {
               child: FloatingActionButton(
                 backgroundColor: Colors.grey[850],
                 onPressed: (){
-                  NewPurchasePage();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NewPurchasePage()));
                   /*createAlertDialog(context).then((onValue){
                     SnackBar mySnackbar = SnackBar(content: Text("Purchase $onValue Created"));
                     Scaffold.of(context).showSnackBar(mySnackbar);
